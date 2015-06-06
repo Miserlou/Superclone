@@ -1,4 +1,4 @@
-![http://i.imgur.com/0eo0Cui.png](It's a sheep! Wow. What a logo.)
+![It's a sheep! Wow. What a logo.](http://i.imgur.com/0eo0Cui.png)
 # SuperClone
 Clone all repositories from a Gitweb or HgWeb instance in parallel.
 
