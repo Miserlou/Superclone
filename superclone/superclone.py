@@ -20,6 +20,10 @@ def superclone(args):
         # Clone threads
 
     url = args['url'][0]
+
+    if 'http:' in url:
+        print "WARNING! You are about clone data over plaintext HTTP."
+
     web_response = requests.get(url)
 
     if web_response.status_code != 200:
@@ -72,8 +76,9 @@ def extract_mercurial(html_content):
 def clone_repo(address, repo_type):
 
     if repo_type == MERCURIAL:
-        print MERCURIAL, 'clone', address
-
+        command = MERCURIAL + ' clone ' + address
+        print command
+        sarge.run(command)
 
     else:
         raise Exception(repo_type, "is not yet supported.")        
